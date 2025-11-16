@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" /> 
+    <title>Seven - Planos</title>
+</head>
+
+<body class="plano-page">
+    
+    <header>
+        <div class="logo">IPTV SEVEN</div>
+
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li class="active-nav"><a href="plano.html">Plano</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu-container" aria-hidden="true">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="plano.html">Plano</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="container">
+        <section class="plano-conteudo-wrapper">
+            <h1 class="titulo-principal-planos">
+                Entenda nossos Planos
+            </h1>
+
+            <p class="subtitulo-planos">
+                Para oferecer a melhor experiência aos nossos usuários, disponibilizamos diversos planos que se adaptam às suas necessidades e ao seu tempo de uso.
+            </p>
+
+            <div class="container-planos">
+                
+                <div class="cartao-plano plano-prata">
+                    <h2 class="titulo-plano">Plano Prata</h2>
+                    <p class="descricao">Perfeito para quem deseja conhecer a qualidade do serviço sem compromisso.</p>
+                </div>
+
+                <div class="cartao-plano plano-ouro">
+                    <h2 class="titulo-plano">Plano Ouro</h2>
+                    <p class="descricao">Uma opção equilibrada para quem busca economia e continuidade.</p>
+                </div>
+
+                <div class="cartao-plano plano-platina">
+                    <h2 class="titulo-plano">Plano Platina</h2>
+                    <p class="descricao">A escolha inteligente para quem quer estabilidade e um excelente custo-benefício.</p>
+                </div>
+
+                <div class="cartao-plano plano-diamante destaque-melhor-valor">
+                    <span class="ribbon-destaque">⭐ Maior Economia!</span> 
+                    <h2 class="titulo-plano"> Plano Diamante</h2>
+                    <p class="descricao">O plano mais completo e vantajoso. Máxima economia, acesso garantido o ano inteiro.</p>
+                </div>
+
+            </div>
+            <div class="secao-teste-gratuito">
+                <p class="aviso-teste-gratuito">
+                    Teste gratuito de <strong>2 horas</strong> disponível!
+                </p>
+            </div>
+
+            <h2 class="titulo-pagamento">
+                Formas de Pagamento
+            </h2>
+
+            <ul class="formas-pagamento-lista">
+                <li><span class="icone-check">✔</span> Pix</li>
+                <li><span class="icone-check">✔</span> Transferência Bancária</li>
+                <li><span class="icone-check">✔</span> Boleto</li>
+            </ul>
+            </section>
+    </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
