@@ -57,8 +57,14 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background-color: rgba(10, 10, 10, 0.9);
+    
+    /* 🟢 CORREÇÃO: Usando uma opacidade muito baixa para se misturar ao fundo */
+    background-color: rgba(10, 10, 10, 0.2); 
+    
+    /* Mantendo o efeito de blur para dar profundidade */
     backdrop-filter: blur(6px);
+    
+    /* Mantendo a borda inferior sutil */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
