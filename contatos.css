@@ -11,10 +11,29 @@
     --border-radius-lg: 12px;
 }
 
+/* ======================================================= */
+/* ====== 01. CORREÇÃO DO HEADER PARA TRANSPARÊNCIA ======= */
+/* ======================================================= */
+/* Usa alta especificidade para garantir que o header fique completamente transparente 
+   apenas nesta página, anulando o background e o blur do styles.css. */
+body.products-page header {
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    border-bottom: none !important;
+}
+
+
+/* ======================================================= */
+/* ====== 02. ESTILIZAÇÃO DA PÁGINA DE CONTATO ============ */
+/* ======================================================= */
+
 .contact-container {
     text-align: center;
     max-width: 800px;
+    
+    /* Margem superior para descer mais o conteúdo */
     margin: 150px auto 60px auto;
+    
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -56,7 +75,7 @@
     align-items: flex-start; 
 }
 
-/* 🟢 MODIFICADO: Estilo para cada coluna (agora com efeito de brilho na borda) */
+/* Estilo para cada coluna (agora como "cartões" com efeito de brilho) */
 .contact-column {
     flex: 1; 
     min-width: 280px; 
@@ -66,19 +85,19 @@
     padding: 30px 20px; 
     
     background-color: var(--box-bg-light); 
-    border: 1px solid var(--border-color-default); /* Borda padrão mais sutil */
+    border: 1px solid var(--border-color-default); 
     border-radius: var(--border-radius-lg); 
-    box-shadow: 0 4px 10px var(--box-shadow-default); /* Sombra inicial mais suave */
+    box-shadow: 0 4px 10px var(--box-shadow-default); 
     
-    transition: all 0.3s ease; /* Transição para todas as propriedades */
+    transition: all 0.3s ease; 
 }
 
-/* Efeito de hover para as colunas - Brilho na borda e sombra mais intensa */
+/* Efeito de hover para as colunas */
 .contact-column:hover {
     transform: translateY(-5px); 
-    border-color: var(--border-color-glow); /* Borda mais clara no hover */
-    box-shadow: 0 8px 25px var(--box-shadow-hover), /* Sombra mais intensa */
-                0 0 15px rgba(255, 255, 255, 0.1); /* Brilho sutil na própria caixa */
+    border-color: var(--border-color-glow); 
+    box-shadow: 0 8px 25px var(--box-shadow-hover), 
+                0 0 15px rgba(255, 255, 255, 0.1); 
 }
 
 /* Título de cada coluna (WhatsApp/Telegram) */
@@ -97,7 +116,7 @@
     font-size: 1.6rem;
 }
 
-/* 🟢 MODIFICADO: Efeito de brilho também nos botões */
+/* Efeito de brilho nos botões */
 .contact-button {
     position: relative;
     overflow: hidden;
@@ -114,10 +133,10 @@
     border-radius: var(--border-radius-lg);
     
     background-color: var(--box-bg-light);
-    border: 1px solid var(--border-color-default); /* Borda padrão mais sutil */
+    border: 1px solid var(--border-color-default); 
     
     transition: all 0.4s ease-in-out;
-    box-shadow: 0 2px 8px var(--box-shadow-default); /* Sombra inicial mais suave */
+    box-shadow: 0 2px 8px var(--box-shadow-default); 
 }
 
 .contact-button::before {
@@ -135,9 +154,9 @@
 .contact-button:hover {
     transform: translateY(-5px) scale(1.02);
     color: var(--text-light);
-    border-color: var(--border-color-glow); /* Borda mais clara no hover */
-    box-shadow: 0 4px 15px var(--box-shadow-hover), /* Sombra mais intensa */
-                0 0 10px rgba(255, 255, 255, 0.08); /* Brilho sutil */
+    border-color: var(--border-color-glow); 
+    box-shadow: 0 4px 15px var(--box-shadow-hover), 
+                0 0 10px rgba(255, 255, 255, 0.08); 
 }
 
 .contact-button:hover::before {
@@ -168,4 +187,3 @@ body.products-page {
         margin-bottom: 15px; 
     }
 }
-
