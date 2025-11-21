@@ -15,9 +15,9 @@
     <link rel="icon" type="image/png" href="./images/Icone-site (2).png" />
 
     <style>
-        /* --- CORREÇÕES GERAIS PARA LAYOUT --- */
+        /* --- CORREÇÕES GERAIS --- */
         body, html {
-            overflow-x: hidden; /* Impede que o site fique "dançando" para os lados */
+            overflow-x: hidden;
             width: 100%;
         }
 
@@ -41,9 +41,9 @@
 
         /* --- OTIMIZAÇÃO ESPECIAL PARA MOBILE (CELULAR) --- */
         @media (max-width: 768px) {
-            /* Ajusta o Hero (Banner Venom) para não ficar gigante */
+            /* Ajusta o Hero */
             .catalog-hero {
-                height: 60vh; /* Ocupa 60% da tela apenas */
+                height: 60vh;
                 background-position: center top;
             }
             
@@ -53,23 +53,35 @@
             }
 
             .catalog-content h2 {
-                font-size: 2.2rem; /* Diminui a fonte do título */
+                font-size: 2.2rem;
             }
 
-            /* Arruma a grade de filmes para ficar igual App (2 colunas) */
+            /* Grade de Filmes */
             .movie-grid {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr); /* 2 filmes por linha */
-                gap: 15px; /* Espaço menor entre eles */
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+                gap: 15px; /* Espaço entre cards */
                 padding: 0 10px;
             }
 
             .movie-card .poster {
-                height: 220px; /* Altura fixa para não quebrar */
+                height: 220px; /* Altura fixa da imagem */
             }
 
+            /* --- CORREÇÃO DO TEXTO CORTADO --- */
             .movie-info h4 {
-                font-size: 0.9rem; /* Título do filme menor */
+                font-size: 0.85rem; /* Fonte um pouquinho menor */
+                white-space: normal !important; /* Permite quebrar linha */
+                overflow: visible !important;   /* Mostra o texto todo */
+                text-overflow: clip !important; /* Tira os três pontinhos (...) */
+                line-height: 1.2; /* Espaçamento entre linhas */
+                height: auto; /* Altura automática para caber o texto */
+                margin-bottom: 4px;
+            }
+
+            .movie-info p {
+                font-size: 0.75rem;
+                margin-top: 2px;
             }
 
             /* Ajuste nos cards de Esporte */
@@ -146,187 +158,3 @@
                 <div class="movie-card">
                     <div class="poster" style="background-image: url('https://image.tmdb.org/t/p/w600_and_h900_bestv2/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg');">
                         <div class="hover-play"><i class="fas fa-play-circle"></i></div>
-                        <span class="badge-hd">4K</span>
-                    </div>
-                    <div class="movie-info">
-                        <h4>Deadpool & Wolverine</h4>
-                        <p>Ação / Comédia</p>
-                    </div>
-                </div>
-
-                <div class="movie-card">
-                    <div class="poster" style="background-image: url('images/Round-6-2a-temporada-2.jpg');">
-                        <div class="hover-play"><i class="fas fa-play-circle"></i></div>
-                        <span class="badge-hd">SÉRIE</span>
-                    </div>
-                    <div class="movie-info">
-                        <h4>Round 6 (Squid Game)</h4>
-                        <p>Dorama / Suspense</p>
-                    </div>
-                </div>
-
-                <div class="movie-card">
-                    <div class="poster" style="background-image: url('https://image.tmdb.org/t/p/w600_and_h900_bestv2/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg');">
-                        <div class="hover-play"><i class="fas fa-play-circle"></i></div>
-                        <span class="badge-hd">FHD</span>
-                    </div>
-                    <div class="movie-info">
-                        <h4>Divertida Mente 2</h4>
-                        <p>Animação</p>
-                    </div>
-                </div>
-
-                <div class="movie-card">
-                    <div class="poster" style="background-image: url('https://image.tmdb.org/t/p/w600_and_h900_bestv2/49WJfeN0moxb9IPfGn8AIqMGskD.jpg');">
-                        <div class="hover-play"><i class="fas fa-play-circle"></i></div>
-                        <span class="badge-hd">4K HDR</span>
-                    </div>
-                    <div class="movie-info">
-                        <h4>Stranger Things</h4>
-                        <p>Série / Ficção</p>
-                    </div>
-                </div>
-
-                 <div class="movie-card">
-                    <div class="poster" style="background-image: url('https://image.tmdb.org/t/p/w600_and_h900_bestv2/gKkl37BQuKTanygYQG1pyYgLVgf.jpg');">
-                        <div class="hover-play"><i class="fas fa-play-circle"></i></div>
-                        <span class="badge-hd">IMAX</span>
-                    </div>
-                    <div class="movie-info">
-                        <h4>Planeta dos Macacos</h4>
-                        <p>O Reinado</p>
-                    </div>
-                </div>
-
-                <div class="movie-card">
-                    <div class="poster" style="background-image: url('https://image.tmdb.org/t/p/w600_and_h900_bestv2/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg');">
-                        <div class="hover-play"><i class="fas fa-play-circle"></i></div>
-                        <span class="badge-hd">4K</span>
-                    </div>
-                    <div class="movie-info">
-                        <h4>Avatar: Caminho da Água</h4>
-                        <p>Aventura / Sci-Fi</p>
-                    </div>
-                </div>
-
-                <div class="movie-card">
-                    <div class="poster" style="background-image: url('https://image.tmdb.org/t/p/w600_and_h900_bestv2/gh2bmprLtUQ8oXCSluzfqaicyrm.jpg');">
-                        <div class="hover-play"><i class="fas fa-play-circle"></i></div>
-                        <span class="badge-hd">FHD</span>
-                    </div>
-                    <div class="movie-info">
-                        <h4>John Wick 4: Baba Yaga</h4>
-                        <p>Ação</p>
-                    </div>
-                </div>
-
-                <div class="movie-card">
-                    <div class="poster" style="background-image: url('images/WhatsApp\ Image\ 2025-11-20\ at\ 20.21.46.jpeg');">
-                        <div class="hover-play"><i class="fas fa-play-circle"></i></div>
-                        <span class="badge-hd">KIDS</span>
-                    </div>
-                    <div class="movie-info">
-                        <h4>Deu a Louca na Chapeuzinho</h4>
-                        <p>Animação / Comédia</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="live-sports-section">
-            <div class="section-header">
-                <h3><i class="fas fa-bolt" style="color: #ff0055;"></i> ACONTECENDO AGORA</h3>
-                <div class="live-indicator">
-                    <span class="blink-dot"></span> AO VIVO
-                </div>
-            </div>
-
-            <div class="match-grid">
-                <div class="match-card">
-                    <div class="match-bg" style="background-image: url('images/brasileirao.png');"></div>
-                    <div class="match-overlay">
-                        <div class="league-badge">BRASILEIRÃO</div>
-                        <div class="teams-container">
-                            <div class="team">
-                                <div class="team-logo">FLA</div>
-                                <span>Flamengo</span>
-                            </div>
-                            <div class="versus">X</div>
-                            <div class="team">
-                                <div class="team-logo">PAL</div>
-                                <span>Palmeiras</span>
-                            </div>
-                        </div>
-                        <a href="assinaragora.html" class="btn-watch"><i class="fas fa-play"></i> ASSISTIR</a>
-                    </div>
-                </div>
-
-                <div class="match-card">
-                    <div class="match-bg" style="background-image: url('images/champ.avif');"></div>
-                    <div class="match-overlay">
-                        <div class="league-badge" style="background: #363b4d;">CHAMPIONS</div>
-                        <div class="teams-container">
-                            <div class="team">
-                                <div class="team-logo">MCI</div>
-                                <span>Man. City</span>
-                            </div>
-                            <div class="versus">X</div>
-                            <div class="team">
-                                <div class="team-logo">RMA</div>
-                                <span>Real Madrid</span>
-                            </div>
-                        </div>
-                        <a href="assinaragora.html" class="btn-watch"><i class="fas fa-play"></i> ASSISTIR</a>
-                    </div>
-                </div>
-
-                <div class="match-card">
-                    <div class="match-bg" style="background-image: url('images/ufc-4k-1auces3g7disgqtt.jpg');"></div>
-                    <div class="match-overlay">
-                        <div class="league-badge" style="background: #cc0000;">UFC FIGHT PASS</div>
-                        <div class="event-title">
-                            <h2>OLIVEIRA vs MAKHACHEV</h2>
-                            <p>Disputa de Cinturão</p>
-                        </div>
-                        <a href="assinaragora.html" class="btn-watch"><i class="fas fa-play"></i> ASSISTIR</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="vip-pass-container">
-            <div class="vip-glass-card">
-                <div class="glow-effect"></div>
-                <div class="vip-content">
-                    
-                    <span class="promo-badge">33% OFF</span>
-
-                    <div class="icon-crown"><i class="fas fa-crown"></i></div>
-                    <h2>PROMOÇÃO MENSAL VIP</h2>
-                    <p class="vip-subtitle">A qualidade de cinema que você merece, pelo menor preço.</p>
-                    
-                    <ul class="vip-benefits">
-                        <li><i class="fas fa-check-circle"></i> +2.000 Canais 4K</li>
-                        <li><i class="fas fa-check-circle"></i> Filmes & Séries On-Demand</li>
-                        <li><i class="fas fa-check-circle"></i> Sem Travamentos (Anti-Buffer)</li>
-                    </ul>
-
-                    <div class="vip-action-row">
-                        <div class="price-box">
-                            <span class="old-price">De R$ 29,90</span>
-                            <div class="new-price"><small>POR R$</small> 19,90</div>
-                        </div>
-
-                        <a href="assinaragora.html" class="btn-vip-aligned">LIBERAR ACESSO <i class="fas fa-unlock-alt"></i></a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <script src="script.js"></script>
-</body>
-</html>
