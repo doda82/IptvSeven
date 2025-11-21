@@ -15,71 +15,75 @@
     <link rel="icon" type="image/png" href="./images/Icone-site (2).png" />
 
     <style>
-        /* Layout para alinhar Preço e Botão lado a lado */
+        /* --- CORREÇÕES GERAIS PARA LAYOUT --- */
+        body, html {
+            overflow-x: hidden; /* Impede que o site fique "dançando" para os lados */
+            width: 100%;
+        }
+
+        /* --- ESTILOS DA OFERTA VIP (PC) --- */
         .vip-action-row {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 30px; /* Espaço entre preço e botão */
+            gap: 30px;
             margin-top: 30px;
-            flex-wrap: wrap; /* Para não quebrar no celular */
+            flex-wrap: wrap;
         }
 
-        .price-box {
-            text-align: left;
-        }
+        .price-box { text-align: left; }
+        .old-price { display: block; font-size: 0.9rem; color: #888; text-decoration: line-through; margin-bottom: -5px; }
+        .new-price { font-family: 'Orbitron', sans-serif; font-size: 2.5rem; color: #fff; font-weight: 700; line-height: 1; }
+        .new-price small { font-size: 1rem; color: #00ff88; }
+        .promo-badge { background: #00ff88; color: black; padding: 5px 15px; border-radius: 20px; font-weight: 900; font-size: 0.8rem; display: inline-block; margin-bottom: 15px; box-shadow: 0 0 15px rgba(0, 255, 136, 0.4); }
+        .btn-vip-aligned { background: linear-gradient(90deg, #8a2be2, #ff0055); color: white; padding: 15px 40px; border-radius: 50px; font-weight: 800; text-transform: uppercase; font-size: 1rem; box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3); height: fit-content; white-space: nowrap; }
+        .btn-vip-aligned:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 0, 85, 0.4); }
 
-        .old-price {
-            display: block;
-            font-size: 0.9rem;
-            color: #888;
-            text-decoration: line-through;
-            margin-bottom: -5px;
-        }
+        /* --- OTIMIZAÇÃO ESPECIAL PARA MOBILE (CELULAR) --- */
+        @media (max-width: 768px) {
+            /* Ajusta o Hero (Banner Venom) para não ficar gigante */
+            .catalog-hero {
+                height: 60vh; /* Ocupa 60% da tela apenas */
+                background-position: center top;
+            }
+            
+            .catalog-content {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
 
-        .new-price {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            color: #fff;
-            font-weight: 700;
-            line-height: 1;
-        }
-        
-        .new-price small {
-            font-size: 1rem;
-            color: #00ff88; /* Verde Neon */
-        }
+            .catalog-content h2 {
+                font-size: 2.2rem; /* Diminui a fonte do título */
+            }
 
-        /* Badge de Porcentagem */
-        .promo-badge {
-            background: #00ff88;
-            color: black;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 900;
-            font-size: 0.8rem;
-            display: inline-block;
-            margin-bottom: 15px;
-            box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
-        }
+            /* Arruma a grade de filmes para ficar igual App (2 colunas) */
+            .movie-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* 2 filmes por linha */
+                gap: 15px; /* Espaço menor entre eles */
+                padding: 0 10px;
+            }
 
-        /* Ajuste no botão para ficar na mesma altura */
-        .btn-vip-aligned {
-            background: linear-gradient(90deg, #8a2be2, #ff0055);
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-weight: 800;
-            text-transform: uppercase;
-            font-size: 1rem;
-            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
-            height: fit-content;
-            white-space: nowrap;
-        }
+            .movie-card .poster {
+                height: 220px; /* Altura fixa para não quebrar */
+            }
 
-        .btn-vip-aligned:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(255, 0, 85, 0.4);
+            .movie-info h4 {
+                font-size: 0.9rem; /* Título do filme menor */
+            }
+
+            /* Ajuste nos cards de Esporte */
+            .match-card {
+                margin-bottom: 20px;
+            }
+
+            /* Ajuste na oferta VIP final */
+            .vip-action-row {
+                gap: 15px;
+            }
+            .new-price {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
