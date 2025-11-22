@@ -13,6 +13,176 @@
     
     <title>IPTV SEVEN - O Universo em Pixels</title>
     <link rel="icon" type="image/png" href="./images/Icone-site (2).png" />
+
+    <style>
+        /* --- ESTILO CINEMA PREMIUM ROXO --- */
+
+        body {
+            background-color: #050507; 
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- HEADER INVISÍVEL (TRANSPARENTE) --- */
+        header {
+            position: absolute; /* Isso faz ele flutuar por cima do banner */
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* Degradê suave só para o texto não sumir se o fundo for claro */
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, transparent 100%);
+            z-index: 1000; /* Garante que fique na frente de tudo */
+            border: none;
+        }
+
+        /* --- CONFIGURAÇÃO DO FUNDO DO MENU HAMBÚRGUER --- */
+        .mobile-menu-container {
+            /* AQUI: Mude o link dentro de url('') para trocar a foto */
+            /* O linear-gradient serve para escurecer a foto e o texto aparecer */
+            background: linear-gradient(rgba(10, 5, 20, 0.9), rgba(10, 5, 20, 0.95)), 
+                        url('images/hallowen.jpg'); 
+            
+            background-size: cover;
+            background-position: center;
+            /* ----------------------------------------------------- */
+        }
+
+        /* HERO SECTION */
+        .hero-container {
+            position: relative;
+            /* Banner Godzilla x Kong */
+            background: linear-gradient(to bottom, rgba(5, 5, 7, 0.3) 0%, #050507 100%),
+                        url('https://image.tmdb.org/t/p/original/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg');
+            background-size: cover;
+            background-position: center top;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+
+        /* Luz ambiente Roxa */
+        .ambient-light {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 60%;
+            background: radial-gradient(circle at 50% 0%, rgba(138, 43, 226, 0.3), transparent 70%);
+            pointer-events: none;
+        }
+
+        /* TAG DE LANÇAMENTO */
+        .tag-cine {
+            background: linear-gradient(90deg, #8a2be2, #ff0055);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.4);
+            margin-bottom: 25px;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+        .hero-content h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 4rem;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            font-weight: 300;
+        }
+        
+        .hero-description strong {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* BOTÕES */
+        .hero-buttons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        /* Botão Roxo Derretendo */
+        .btn-liquid-purple {
+            position: relative;
+            padding: 18px 45px;
+            background: linear-gradient(45deg, #8a2be2, #be2edd);
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 
+                0 0 15px rgba(138, 43, 226, 0.5),
+                0 5px 30px rgba(190, 46, 221, 0.4),
+                inset 0 0 15px rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-liquid-purple:hover {
+            box-shadow: 
+                0 0 30px rgba(138, 43, 226, 0.8),
+                0 10px 50px rgba(190, 46, 221, 0.6);
+            transform: scale(1.05) translateY(-3px);
+        }
+
+        .btn-glass {
+            padding: 18px 45px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .btn-glass:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #fff;
+        }
+
+        /* Ajustes Mobile */
+        @media (max-width: 768px) {
+            .hero-container { background-position: center center; }
+            .hero-content h1 { font-size: 2.8rem; }
+            .hero-buttons { flex-direction: column; padding: 0 40px; gap: 15px; }
+            .btn-liquid-purple, .btn-glass { width: 100%; }
+            
+            /* Galeria scrollável no mobile */
+            .gallery-track { 
+                justify-content: flex-start;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-left: 20px;
+                padding-bottom: 30px;
+            }
+        }
+
+    </style>
 </head>
 <body>
 
@@ -50,16 +220,15 @@
         <div class="ambient-light"></div>
 
         <div class="hero-content">
-            <span class="tag-cine">LANÇAMENTO 4K</span>
+            <span class="tag-cine">LANÇAMENTO ÉPICO</span>
             <h1>O CINEMA <br> NA SUA CASA</h1>
             <p class="hero-description">
-                Tenha acesso ilimitado a <strong>Filmes, Doramas, Futebol ao vivo e Séries.</strong> 
-                A qualidade de streaming que você merece, sem travamentos.
+                Tenha acesso ilimitado aos maiores sucessos de bilheteria. <strong>Filmes, Séries, Futebol e muito mais.</strong> 
+                Qualidade 4K sem travamentos.
             </p>
             <div class="hero-buttons">
-                <a href="#" onclick="redirectToWhatsapp('teste')" class="btn btn-primary">TESTE GRÁTIS</a>
-                
-                <a href="produtos.html" class="btn btn-outline">VER CATÁLOGO</a>
+                <a href="#" onclick="redirectToWhatsapp('teste')" class="btn-liquid-purple">TESTE GRÁTIS</a>
+                <a href="produtos.html" class="btn-glass">VER CATÁLOGO</a>
             </div>
         </div>
 
@@ -114,41 +283,25 @@
 
     <script>
         function redirectToWhatsapp(tipo) {
-            // Seus números
-            const numbers = [
-                "5531987002923", 
-                "5531991814249"
-            ];
-
-            // Define a mensagem baseada no botão clicado
+            const numbers = ["5531987002923", "5531991814249"];
             let messageText = "";
+            
             if (tipo === 'teste') {
-                // Mensagem específica para o botão roxo
                 messageText = "Olá! Vim pelo site e quero solicitar meu TESTE GRÁTIS.";
             } else {
-                // Caso genérico
                 messageText = "Olá! Vim pelo site da IPTV SEVEN e gostaria de mais informações.";
             }
             
             const message = encodeURIComponent(messageText);
-
-            // Lógica de Rotação (Load Balancer)
             let lastIndex = localStorage.getItem('lastWppIndex');
             let nextIndex;
             
-            if (lastIndex === null) {
-                nextIndex = 0;
-            } else {
-                nextIndex = parseInt(lastIndex) === 0 ? 1 : 0;
-            }
+            if (lastIndex === null) { nextIndex = 0; } 
+            else { nextIndex = parseInt(lastIndex) === 0 ? 1 : 0; }
 
             localStorage.setItem('lastWppIndex', nextIndex);
-
-            // Abre o WhatsApp
             window.open(`https://wa.me/${numbers[nextIndex]}?text=${message}`, '_blank');
         }
     </script>
 </body>
 </html>
-
-
