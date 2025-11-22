@@ -15,9 +15,33 @@
     <link rel="icon" type="image/png" href="./images/Icone-site (2).png" />
 
     <style>
-        /* --- CORREÇÕES GERAIS --- */
+        /* --- CORREÇÃO PARA O RODAPÉ NÃO SUBIR --- */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* --- FUNDO DO MENU MOBILE --- */
+        .mobile-menu-container {
+            background-image: url('images/natal.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(5, 5, 10, 0.95); 
+            background-blend-mode: overlay;
+        }
+
+        /* --- CORREÇÕES GERAIS PARA LAYOUT --- */
         body, html {
-            overflow-x: hidden;
+            overflow-x: hidden; /* Impede que o site fique "dançando" para os lados */
             width: 100%;
         }
 
@@ -41,9 +65,9 @@
 
         /* --- OTIMIZAÇÃO ESPECIAL PARA MOBILE (CELULAR) --- */
         @media (max-width: 768px) {
-            /* Ajusta o Hero */
+            /* Ajusta o Hero (Banner Venom) para não ficar gigante */
             .catalog-hero {
-                height: 60vh;
+                height: 60vh; /* Ocupa 60% da tela apenas */
                 background-position: center top;
             }
             
@@ -53,29 +77,28 @@
             }
 
             .catalog-content h2 {
-                font-size: 2.2rem;
+                font-size: 2.2rem; /* Diminui a fonte do título */
             }
 
-            /* Grade de Filmes */
+            /* Arruma a grade de filmes para ficar igual App (2 colunas) */
             .movie-grid {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-                gap: 15px; /* Espaço entre cards */
+                grid-template-columns: repeat(2, 1fr); /* 2 filmes por linha */
+                gap: 15px; /* Espaço menor entre eles */
                 padding: 0 10px;
             }
 
             .movie-card .poster {
-                height: 220px; /* Altura fixa da imagem */
+                height: 220px; /* Altura fixa para não quebrar */
             }
 
-            /* --- CORREÇÃO DO TEXTO CORTADO --- */
             .movie-info h4 {
-                font-size: 0.85rem; /* Fonte um pouquinho menor */
-                white-space: normal !important; /* Permite quebrar linha */
-                overflow: visible !important;   /* Mostra o texto todo */
-                text-overflow: clip !important; /* Tira os três pontinhos (...) */
-                line-height: 1.2; /* Espaçamento entre linhas */
-                height: auto; /* Altura automática para caber o texto */
+                font-size: 0.85rem; /* Fonte ajustada */
+                white-space: normal !important; 
+                overflow: visible !important;
+                text-overflow: clip !important;
+                line-height: 1.2;
+                height: auto;
                 margin-bottom: 4px;
             }
 
