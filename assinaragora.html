@@ -315,10 +315,10 @@
 
     </main>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
     
     <script>
-        // Função para trocar as abas (Pessoal, Revenda, Ativo)
+        // Função para trocar as abas (Pessoal, Revenda, Ativo) - MANTIDA IGUAL
         function switchPlan(type) {
             const btns = document.querySelectorAll('.switch-btn');
             btns.forEach(btn => btn.classList.remove('active'));
@@ -343,9 +343,10 @@
             }
         }
 
-        // Função MESTRE para comprar os planos com mensagem personalizada
+        // Função ATUALIZADA com número único
         function buyPlan(planType) {
-            const numbers = ["5531987002923", "5531991814249"];
+            // Número fixo único
+            const number = "5531973130470";
             let msg = "";
 
             // Define a mensagem baseada no botão clicado
@@ -367,24 +368,12 @@
                 // Plano Por Ativo
                 case 'ativo': msg = "Olá! Tenho interesse em contratar o *PAINEL PÓS-PAGO (Por Ativo)*."; break;
                 
-                // Suporte Geral (Se houver botão na página)
+                // Suporte Geral
                 case 'suporte_geral': msg = "Olá! Vim pelo site da IPTV SEVEN e preciso de ajuda."; break;
             }
 
-            // Rotação de números (Load Balancer)
-            let lastIndex = localStorage.getItem('lastWppIndex');
-            let nextIndex;
-            
-            if (lastIndex === null) {
-                nextIndex = 0;
-            } else {
-                nextIndex = parseInt(lastIndex) === 0 ? 1 : 0;
-            }
-
-            localStorage.setItem('lastWppIndex', nextIndex);
-
-            // Abre o WhatsApp
-            window.open(`https://wa.me/${numbers[nextIndex]}?text=${encodeURIComponent(msg)}`, '_blank');
+            // Abre o WhatsApp diretamente no número fixo
+            window.open(`https://wa.me/${number}?text=${encodeURIComponent(msg)}`, '_blank');
         }
     </script>
 </body>
