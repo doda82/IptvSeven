@@ -19,12 +19,12 @@
 
         body {
             background-color: #050507; 
-            /* AQUI: Coloquei o banner no fundo do site todo para não ficar buraco */
+            /* Banner Godzilla no fundo do body */
             background: linear-gradient(to bottom, rgba(5, 5, 7, 0.5) 0%, #050507 100%),
                         url('https://image.tmdb.org/t/p/original/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg');
             background-size: cover;
             background-position: center top;
-            background-attachment: fixed; /* Efeito Premium: O fundo fica parado quando rola */
+            background-attachment: fixed; /* Fundo fixo */
             
             overflow-x: hidden;
             margin: 0;
@@ -56,7 +56,6 @@
         /* HERO SECTION */
         .hero-container {
             position: relative;
-            /* Removi o background daqui pois agora está no body */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -108,7 +107,7 @@
             max-width: 700px;
             margin: 0 auto 40px auto;
             font-weight: 300;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.8); /* Sombra para ler melhor */
+            text-shadow: 0 2px 5px rgba(0,0,0,0.8);
         }
         
         .hero-description strong {
