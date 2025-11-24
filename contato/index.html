@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
     
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <title>Suporte Premium - IPTV SEVEN</title>
-    <link rel="icon" type="image/png" href="/images/Icone-site (2).png" />
+    <link rel="icon" type="image/png" href="../images/Icone-site (2).png" />
 
     <style>
         /* --- CORREÇÃO PARA O RODAPÉ NÃO SUBIR --- */
@@ -31,8 +31,8 @@
 
         /* --- FUNDO DO MENU MOBILE --- */
         .mobile-menu-container {
-            /* CORRIGIDO: Adicionei a barra / na imagem de fundo */
-            background-image: url('/images/natal.jpg');
+            /* CORREÇÃO: Link com .. para voltar uma pasta */
+            background-image: url('../images/natal.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -182,7 +182,7 @@
 <body>
 
     <header>
-        <a href="/" style="text-decoration: none; color: white;">
+        <a href="../index.html" style="text-decoration: none; color: white;">
             <div class="logo">IPTV SEVEN</div>
         </a>
         
@@ -193,10 +193,10 @@
         </button>
         <nav class="desktop-nav">
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/produtos/">Canais & Filmes</a></li>
-                <li><a href="/assinaragora/">Assinar Agora</a></li>
-                <li class="active-nav"><a href="/contato/">Suporte</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../produtos/">Canais & Filmes</a></li>
+                <li><a href="../assinaragora/">Assinar Agora</a></li>
+                <li class="active-nav"><a href="#">Suporte</a></li>
             </ul>
         </nav>
     </header>
@@ -204,10 +204,10 @@
     <div id="mobile-menu" class="mobile-menu-container">
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/produtos/">Canais & Filmes</a></li>
-                <li><a href="/assinaragora/">Assinar Agora</a></li>
-                <li class="active-nav"><a href="/contato/">Suporte</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../produtos/">Canais & Filmes</a></li>
+                <li><a href="../assinaragora/">Assinar Agora</a></li>
+                <li class="active-nav"><a href="#">Suporte</a></li>
             </ul>
         </nav>
     </div>
@@ -248,7 +248,35 @@
         </div>
     </main>
 
-    <script src="/script.js"></script>
+    <footer class="footer-bar">
+        <div class="footer-container">
+            
+            <div class="footer-section left">
+                <a href="../termos/">Termos de Uso</a>
+                <span class="sep">•</span>
+                <a href="#">Suporte</a>
+            </div>
+
+            <div class="footer-section center">
+                <p>2025 © <strong>IPTV SEVEN</strong> | Todos os direitos reservados.</p>
+            </div>
+
+            <div class="footer-section right">
+                <div class="pay-mini" title="Pix">
+                    <i class="fas fa-qrcode"></i> <span>Pix</span>
+                </div>
+                <div class="pay-mini" title="Boleto">
+                    <i class="fas fa-barcode"></i> <span>Boleto</span>
+                </div>
+                <div class="pay-mini" title="Transferência">
+                    <i class="fas fa-university"></i> <span>Transf.</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
     
     <script>
         function redirectToWhatsapp() {
