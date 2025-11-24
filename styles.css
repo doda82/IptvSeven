@@ -1106,11 +1106,16 @@ h1 {
     margin-bottom: 25px;
 }
 
+/* CORREÇÃO AQUI EMBAIXO: Adicionei a chave } que faltava */
 .profit-text {
     color: #00ff88; /* Verde lucro */
     font-weight: bold;
+} 
 
-/* --- RODAPÉ EM BARRA ÚNICA (CLEAN) --- */
+/* =========================================
+   NOVO RODAPÉ - BARRA ÚNICA (CORRIGIDO)
+   ========================================= */
+
 .footer-bar {
     background-color: #050507;
     border-top: 2px solid #a200ff; /* Linha Rosa Neon */
